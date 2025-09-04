@@ -6,7 +6,7 @@
  ******************************************************************************************* */
 
 /**
- * Returns the length of the given string.
+ * 1.Returns the length of the given string.
  *
  * @param {string} value - The input string to calculate the length of.
  * @return {number} - The length of the string.
@@ -27,7 +27,7 @@ function getStringLength(value) {
 }
 
 /**
- * Returns true if the value is a string, otherwise returns false.
+ * 2. Returns true if the value is a string, otherwise returns false.
  *
  * @param {string} value - The value to check if it's a string.
  * @return {boolean} - True if the value is a string, false otherwise.
@@ -53,7 +53,7 @@ function isString(value) {
 }
 
 /**
- * Returns the result of concatenation of two strings.
+ * 3. Returns the result of concatenation of two strings.
  *
  * @param {string} value1 - The first string to concatenate.
  * @param {string} value2 - The second string to concatenate.
@@ -69,7 +69,7 @@ function concatenateStrings(value1, value2) {
 }
 
 /**
- * Returns the first character of the given string.
+ * 4. Returns the first character of the given string.
  *
  * @param {string} value - The input string to extract the first character from.
  * @return {string} - The first character of the string.
@@ -80,11 +80,14 @@ function concatenateStrings(value1, value2) {
  *   getFirstChar('') => ''
  */
 function getFirstChar(value) {
+  if (typeof value !== 'string' || value.length === 0) {
+    return '';
+  }
   return value.charAt(0);
 }
 
 /**
- * Removes leading and trailing whitespace characters from the string.
+ * 5.Removes leading and trailing whitespace characters from the string.
  *
  * @param {string} value - The input string to remove leading and trailing whitespaces from.
  * @return {string} - The string with leading and trailing whitespaces removed.
@@ -94,12 +97,13 @@ function getFirstChar(value) {
  *   removeLeadingAndTrailingWhitespaces('cat ') => 'cat'
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
+
 function removeLeadingAndTrailingWhitespaces(/* value */) {
   throw new Error('Not implemented');
 }
 
 /**
- * Removes only leading whitespace characters from the string.
+ * 6. Removes only leading whitespace characters from the string.
  *
  * @param {string} value - The input string to remove leading whitespaces from.
  * @return {string} - The string with leading whitespaces removed.
