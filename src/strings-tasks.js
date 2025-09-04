@@ -41,7 +41,12 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
+  // проверка приметив
   if (typeof value === 'string') {
+    return true;
+  }
+  // проверка объекта
+  if (value instanceof String) {
     return true;
   }
   return false;
@@ -59,8 +64,8 @@ function isString(value) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2) {
+  return value1 + value2;
 }
 
 /**
