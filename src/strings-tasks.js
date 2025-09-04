@@ -98,8 +98,11 @@ function getFirstChar(value) {
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
 
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingAndTrailingWhitespaces(value) {
+  if (typeof value !== 'string') {
+    return '';
+  }
+  return value.trim();
 }
 
 /**
@@ -113,12 +116,16 @@ function removeLeadingAndTrailingWhitespaces(/* value */) {
  *   removeLeadingWhitespaces('cat ') => 'cat '
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
-function removeLeadingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingWhitespaces(value) {
+  if (typeof value !== 'string') {
+    return '';
+  }
+  // trimStart удаляет только пробелы, табуляции и другие whitespace-символы в начале строки, не трогая хвост.
+  return value.trimStart();
 }
 
 /**
- * Removes only trailing whitespace characters from the string.
+ * 7. Removes only trailing whitespace characters from the string.
  *
  * @param {string} value - The input string to remove trailing whitespaces from.
  * @return {string} - The string with trailing whitespaces removed.
@@ -128,12 +135,16 @@ function removeLeadingWhitespaces(/* value */) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeTrailingWhitespaces(value) {
+  if (typeof value !== 'string') {
+    return '';
+  }
+  // trimEnd() Удаляет только пробелы, табуляции, переносы и другие whitespace-символы в конце строки, не трогая начало.
+  return value.trimEnd();
 }
 
 /**
- * Returns a string that is repeated the specified number of times.
+ * 8. Returns a string that is repeated the specified number of times.
  *
  * @param {string} str - The string to repeat.
  * @param {number} times - The number of times to repeat the string.
