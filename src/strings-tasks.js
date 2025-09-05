@@ -201,7 +201,7 @@ function removeLastOccurrences(str, value) {
 }
 
 /**
- * Calculate the sum of character codes of the given string.
+ * 11.Calculate the sum of character codes of the given string.
  *
  * @param {string} str - The input string.
  * @return {number} - The sum of character codes of the string.
@@ -213,12 +213,17 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes() => 0
  */
 function sumOfCodes(str) {
-  str = String(str);
-  return [...str].reduce((sum, char) => sum + char.charCodeAt(0), 0);
+  let num;
+  if (typeof str === 'string') {
+    num = str;
+  } else {
+    num = '';
+  }
+  return [...num].reduce((sum, char) => sum + char.charCodeAt(0), 0);
 }
 
 /**
- * Checks if a string starts with a specific substring.
+ * 12. Checks if a string starts with a specific substring.
  *
  * @param {string} str - The input string.
  * @param {string} substr - The substring to check.
