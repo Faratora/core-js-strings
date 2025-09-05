@@ -156,10 +156,14 @@ function removeTrailingWhitespaces(value) {
  *   repeatString('', 3) => ''
  *   repeatString('abc', -2) => ''
  */
-function repeatString(/* str, times */) {
-  throw new Error('Not implemented');
+function repeatString(str, times) {
+  if (times <= 0) return '';
+  let result = '';
+  for (let i = 0; i < times; i += 1) {
+    result += str;
+  }
+  return result;
 }
-
 /**
  * Remove the first occurrence of a substring from a string.
  *
