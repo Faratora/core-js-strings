@@ -96,10 +96,7 @@ function getFirstChar(value) {
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  if (typeof value !== 'string') {
-    return '';
-  }
-  return value.trim();
+  return typeof value === 'string' ? value.trim() : '';
 }
 
 /**
