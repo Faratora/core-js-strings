@@ -131,7 +131,8 @@ function removeTrailingWhitespaces(value) {
 }
 // trimEnd() Удаляет только пробелы, табуляции, переносы и другие whitespace-символы в конце строки, не трогая начало.
 /**
- * Returns a string that is repeated the specified number of times.
+ *
+ * 8. Returns a string that is repeated the specified number of times.
  *
  * @param {string} str - The string to repeat.
  * @param {number} times - The number of times to repeat the string.
@@ -143,8 +144,8 @@ function removeTrailingWhitespaces(value) {
  *   repeatString('', 3) => ''
  *   repeatString('abc', -2) => ''
  */
-function repeatString(/* str, times */) {
-  throw new Error('Not implemented');
+function repeatString(str, times) {
+  return times <= 0 ? str.repeat(times) : '';
 }
 
 /**
