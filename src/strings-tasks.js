@@ -370,7 +370,7 @@ function reverseWords(str) {
 }
 
 /**
- * Inverts the case of each character in the given string.
+ * 22.Inverts the case of each character in the given string.
  *
  * @param {string} str - The input string.
  * @returns {string} - The string with the case of each character inverted.
@@ -380,8 +380,13 @@ function reverseWords(str) {
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(/* str */) {
-  throw new Error('Not implemented');
+function invertCase(str) {
+  return str
+    .split('')
+    .map((char) =>
+      char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase()
+    )
+    .join('');
 }
 
 /**
