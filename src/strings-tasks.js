@@ -407,7 +407,7 @@ function getStringFromTemplate(firstName, lastName) {
 }
 
 /**
- * Extracts a name from template string 'Hello, First_Name Last_Name!'.
+ * 24. Extracts a name from template string 'Hello, First_Name Last_Name!'.
  *
  * @param {string} value - The input value.
  * @return {string} - The name extracted from the template.
@@ -416,8 +416,8 @@ function getStringFromTemplate(firstName, lastName) {
  *   extractNameFromTemplate('Hello, John Doe!') => 'John Doe'
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
-function extractNameFromTemplate(/* value */) {
-  throw new Error('Not implemented');
+function extractNameFromTemplate(value) {
+  return value.replace(/^Hello,\s+|!$/g, '');
 }
 
 /**
