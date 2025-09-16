@@ -316,7 +316,7 @@ function countVowels(str) {
 }
 
 /**
- * Returns true if the string is a palindrome; otherwise false.
+ * 19. Returns true if the string is a palindrome; otherwise false.
  * https://en.wikipedia.org/wiki/Palindrome
  *
  * @param {string} str - The input string.
@@ -328,8 +328,10 @@ function countVowels(str) {
  *   isPalindrome('apple') => false
  *   isPalindrome('No lemon, no melon') => true
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  const cleaned = str.toLowerCase().replace(/[^a-z0-9]/gi, '');
+  const reversed = cleaned.split('').reverse().join('');
+  return cleaned === reversed;
 }
 
 /**
