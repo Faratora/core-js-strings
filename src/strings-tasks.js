@@ -100,7 +100,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
 }
 
 /**
- * Removes only leading whitespace characters from the string.
+ * 6. Removes only leading whitespace characters from the string.
  *
  * @param {string} value - The input string to remove leading whitespaces from.
  * @return {string} - The string with leading whitespaces removed.
@@ -110,12 +110,13 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   removeLeadingWhitespaces('cat ') => 'cat '
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
-function removeLeadingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingWhitespaces(value) {
+  return typeof value !== 'string' ? '' : value.trimStart();
 }
+// trimStart удаляет только пробелы, табуляции и другие whitespace-символы в начале строки, не трогая хвост.
 
 /**
- * Removes only trailing whitespace characters from the string.
+ *7.Removes only trailing whitespace characters from the string.
  *
  * @param {string} value - The input string to remove trailing whitespaces from.
  * @return {string} - The string with trailing whitespaces removed.
