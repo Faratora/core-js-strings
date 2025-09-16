@@ -116,7 +116,7 @@ function removeLeadingWhitespaces(value) {
 // trimStart удаляет только пробелы, табуляции и другие whitespace-символы в начале строки, не трогая хвост.
 
 /**
- *7.Removes only trailing whitespace characters from the string.
+ *7. Removes only trailing whitespace characters from the string.
  *
  * @param {string} value - The input string to remove trailing whitespaces from.
  * @return {string} - The string with trailing whitespaces removed.
@@ -126,10 +126,10 @@ function removeLeadingWhitespaces(value) {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeTrailingWhitespaces(value) {
+  return typeof value === 'string' ? value.trimEnd() : '';
 }
-
+// trimEnd() Удаляет только пробелы, табуляции, переносы и другие whitespace-символы в конце строки, не трогая начало.
 /**
  * Returns a string that is repeated the specified number of times.
  *
