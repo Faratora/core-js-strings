@@ -6,7 +6,7 @@
  ******************************************************************************************* */
 
 /**
- * Returns the length of the given string.
+ * 1.Returns the length of the given string.
  *
  * @param {string} value - The input string to calculate the length of.
  * @return {number} - The length of the string.
@@ -27,7 +27,7 @@ function getStringLength(value) {
 }
 
 /**
- * Returns true if the value is a string, otherwise returns false.
+ * 2.Returns true if the value is a string, otherwise returns false.
  *
  * @param {string} value - The value to check if it's a string.
  * @return {boolean} - True if the value is a string, false otherwise.
@@ -41,11 +41,9 @@ function getStringLength(value) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  // проверка приметив
   if (typeof value === 'string') {
     return true;
   }
-  // проверка объекта
   if (value instanceof String) {
     return true;
   }
@@ -53,7 +51,7 @@ function isString(value) {
 }
 
 /**
- * Returns the result of concatenation of two strings.
+ * 3.Returns the result of concatenation of two strings.
  *
  * @param {string} value1 - The first string to concatenate.
  * @param {string} value2 - The second string to concatenate.
@@ -64,12 +62,12 @@ function isString(value) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2) {
+  return value1.concat(value2);
 }
 
 /**
- * Returns the first character of the given string.
+ * 4. Returns the first character of the given string.
  *
  * @param {string} value - The input string to extract the first character from.
  * @return {string} - The first character of the string.
