@@ -234,7 +234,7 @@ function endsWith(str, substr) {
 }
 
 /**
- * Returns a time string in the "mm:ss" format.
+ * 14. Returns a time string in the "mm:ss" format.
  *
  * @param {number} minutes - The number of minutes (non-negative integer).
  * @param {number} seconds - The number of seconds (non-negative integer).
@@ -246,8 +246,10 @@ function endsWith(str, substr) {
  *   formatTime(0, 45) => "00:45"
  *   formatTime(0, 0) => "00:00"
  */
-function formatTime(/* minutes, seconds */) {
-  throw new Error('Not implemented');
+function formatTime(minutes, seconds) {
+  const mins = String(minutes).padStart(2, '0');
+  const secs = String(seconds).padStart(2, '0');
+  return `${mins}:${secs}`;
 }
 
 /**
