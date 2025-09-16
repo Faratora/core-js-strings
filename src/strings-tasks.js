@@ -187,7 +187,7 @@ function removeLastOccurrences(str, value) {
 }
 
 /**
- * Calculate the sum of character codes of the given string.
+ * 11. Calculate the sum of character codes of the given string.
  *
  * @param {string} str - The input string.
  * @return {number} - The sum of character codes of the string.
@@ -198,8 +198,9 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
+function sumOfCodes(str) {
+  const input = typeof str === 'string' ? str : '';
+  return [...input].reduce((sum, char) => sum + char.charCodeAt(0), 0);
 }
 
 /**
