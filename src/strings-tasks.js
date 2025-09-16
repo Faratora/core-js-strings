@@ -421,7 +421,7 @@ function extractNameFromTemplate(value) {
 }
 
 /**
- * Remove the first and last angle brackets from tag string
+ * 25.Remove the first and last angle brackets from tag string
  *
  * @param {string} str - The input tag.
  * @return {string} - The tag without the first and last angle brackets.
@@ -431,12 +431,12 @@ function extractNameFromTemplate(value) {
  *   unbracketTag('<span>') => 'span'
  *   unbracketTag('<a>') => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  return str.slice(1, -1);
 }
 
 /**
- * Extracts e-mails from single string with e-mails list delimited by semicolons
+ * 26.Extracts e-mails from single string with e-mails list delimited by semicolons
  *
  * @param {string} str - The input string.
  * @return {string[]} - The list of e-mails extracted from the string.
