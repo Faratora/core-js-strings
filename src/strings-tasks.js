@@ -253,7 +253,7 @@ function formatTime(minutes, seconds) {
 }
 
 /**
- * Returns a string in reverse order.
+ * 15.Returns a string in reverse order.
  *
  * @param {string} str - The input string.
  * @return {string} - The string in reverse order.
@@ -262,12 +262,12 @@ function formatTime(minutes, seconds) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  return str.split('').reverse().join('');
 }
 
 /**
- * Returns a string with characters in alphabetical order.
+ * 16.Returns a string with characters in alphabetical order.
  *
  * @param {string} str - The input string.
  * @return {string} - The string in alphabetical order.
